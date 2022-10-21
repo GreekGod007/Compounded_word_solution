@@ -9,9 +9,9 @@ In my program I have used Trie data structure.
 For that I have made insert function which insert() each strings into the Trie DS. I have made a getNode() function which create a node of Trie DS.
 For the search purpose I have made a search1() function which is a recursive function which call the another function search() when it reaches the end of a word.And passes the current node and the root of trie into it.
 
-The search function matches the child array of both the node and call the search() again for the node for which the child array value is not null for both(the curr and root).If the curr node in the search is end we put it into our result set.
+The search function matches the child array of both the node and call the search() again for the node for which the child array value is not null for both(the curr and root).If the curr node in the search reaches end we put the value of string for that node into our result unordered_set.
 
-At last we take out the two largest string from the set and output it on the screen.
+At last we take out the two largest string from the unordered_set and output it on the screen.
 We also output the time taken in processing the input file in sec with the help of clock_t.
 
 Thanks for reading this!!
