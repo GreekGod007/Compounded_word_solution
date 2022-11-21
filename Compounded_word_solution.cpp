@@ -11,7 +11,6 @@ unordered_set<string> ans;
 struct TrieNode{
 	struct TrieNode* child[n];
 	string str;
-	bool added;
 };
 
 TrieNode* root;
@@ -21,7 +20,6 @@ struct TrieNode *getNode()
     struct TrieNode *pNode =  new TrieNode;
  
     pNode->str = "";
-    pNode->added=false;
  
     for(int i = 0; i < n; i++){
         pNode->child[i] = NULL;
@@ -33,10 +31,7 @@ struct TrieNode *getNode()
 void search(TrieNode* curr, TrieNode* nword){
 	
 	if(curr->str!="" && nword->str!=""){
-		if(!curr->added){
 	     ans.insert(curr->str);
-	   }
-	   curr->added=false;
 	}
 	
 	if(nword->str!=""){
